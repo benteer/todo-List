@@ -1,0 +1,61 @@
+!DOCTYPE html>
+<head>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div> 
+           <h1>Countdown</h1>
+     <div class="countdown">
+        <div>
+            <p id="days">0</p>
+            <span>days</span>
+        </div>
+        <div>
+            <p id="hours">0</p>
+            <span>hours</span>
+        </div>
+        <div>
+            <p id="min">0</p>
+            <span>Min</span>
+        </div>
+        <div>
+            <p id="sec">0</p>
+            <span>sec</span>
+        </div>
+     </div>
+
+</body>
+<script>
+    let hours = document.getElementById("days");
+    let days = document.getElementById("hours");
+    let min2 = document.getElementById("min");
+    let sec = document.getElementById("sec");
+
+    setInterval(() => {
+         let  max = new Date();
+         let hour = Math.floor(max/1000/60/60) % 24;
+         console.log(hour)
+         let min = Math.floor(max/1000/60) %60;
+
+         let sec2  = Math.floor(max / 1000) %60;
+         
+       
+
+         hours.innerHTML = max.getDate();
+         days.innerHTML = hour;
+         min2.innerHTML =  min;
+         sec.innerHTML = sec2;
+
+         
+
+
+    },3000)
+  
+
+</script>
+
+
+</html>
